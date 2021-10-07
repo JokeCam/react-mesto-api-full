@@ -1,0 +1,12 @@
+.element {
+  min-width: 282px;
+  min-height: 362px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}

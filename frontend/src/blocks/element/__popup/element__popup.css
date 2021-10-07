@@ -1,0 +1,5 @@
+.element__popup {
+  z-index: 1;
+  position: fixed;
+  background-size: contain;
+}

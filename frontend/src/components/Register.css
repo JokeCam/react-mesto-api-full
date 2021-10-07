@@ -1,0 +1,151 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgb(84,84,84, 0.7);
+    min-height: 74px;
+    margin: 0;
+}
+
+.header__link {
+    margin-top: 15px;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: opacity 0.5s;
+}
+
+.header__link:hover {
+    opacity: 0.6;
+}
+
+.header__logo {
+    margin: 0;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+}
+
+.register__form {
+    margin: auto;
+    margin-top: 60px;
+    max-width: 358px;
+}
+
+.register__title {
+    font-family: Inter;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.register__input {
+    border: none;
+    border-bottom: 2px solid #CCCCCC;
+    padding: 0;
+    outline: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: black;
+    height: 27px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #CCCCCC;
+}
+
+.register__input:first-of-type {
+    margin-top: 50px;
+}
+
+.register__input:last-of-type {
+    margin-top: 30px;
+}
+
+.register__button {
+    padding: 0;
+    margin: 0;
+    background: #FFFFFF;
+    border-radius: 2px;
+    height: 50px;
+    border: none;
+    margin-top: 216px;
+    transition: opacity 0.5s;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.register__button:hover {
+    opacity: 0.85;
+}
+
+.register__text {
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .header__logo {
+        padding-left: 27px;
+    }
+
+    .header__link {
+        padding-right: 27px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        border-top: 1px solid rgb(84,84,84, 0.7);
+        padding-top: 27px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        min-height: 56px;
+    }
+
+    .header__logo {
+        max-width: 104px;
+        max-height: 25px;
+    }
+  
+    .header__link {
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .register__form {
+        max-width: 260px;
+    }
+
+    .register__title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .register__button {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

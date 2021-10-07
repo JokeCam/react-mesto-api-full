@@ -1,0 +1,33 @@
+.signout {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signout_shown {
+    display: flex;
+}
+
+.signout__email {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin: 40px 0 18px;
+}
+
+.signout__button {
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 22px;
+    color: #A9A9A9;
+    text-decoration: none;
+    transition: opacity 0.5s;
+    margin-top: 18px;
+    margin: 0 0 40px;
+}
+
+.signout__button:hover {
+    opacity: 0.6;
+}

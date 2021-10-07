@@ -1,0 +1,98 @@
+.header {
+    border-bottom: 1px solid rgb(84,84,84, 0.7);
+    padding-top: 0;
+    min-height: 74px;
+    margin: 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.header__email {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin: 0 24px 0 0;
+}
+
+.header__signout {
+  font-family: Inter;
+  font-size: 18px;
+  line-height: 22px;
+  color: #A9A9A9;
+  text-decoration: none;
+  transition: opacity 0.5s;
+}
+
+.header__button {
+  width: 24px;
+  height: 21px;
+  padding: 0;
+  background-color: black;
+  outline: none;
+  border: none;
+  display: none;
+  margin-right: 30px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+  background-image: url('../images/burger.svg');
+}
+
+.header__button_active {
+  background-image: url('../images/cross.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header__button:hover {
+  opacity: 0.6;
+}
+
+.header__signout:hover {
+  opacity: 0.6;
+}
+
+  @media (max-width: 425px) {
+    .header {
+      min-height: 56px;
+    }
+
+    .header__logo {
+      max-width: 104px;
+      max-height: 25px;
+    }
+
+    .header__button {
+      margin-top: 5px;
+    }
+}
+
+  @media (max-width: 900px) {
+    .header__logo {
+      padding-left: 27px;
+    }
+    
+    .header__container {
+      padding-right: 27px;
+    }
+  }
+  @media (max-width: 550px) {
+    .header__container {
+      display: none;
+    }
+
+    .header__button {
+      display: inline;
+    }
+
+    .header {
+      border-top: 1px solid rgb(84,84,84, 0.7);
+      padding-top: 27px;
+    }
+  }
