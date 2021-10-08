@@ -1,7 +1,5 @@
 const jwt = require('jsonwebtoken');
 
-const app = require('../app')
-
 const AuthorizationError = require('../errors/authorization-err');
 
 module.exports = (req, res, next) => {
@@ -14,6 +12,7 @@ module.exports = (req, res, next) => {
   let payload;
 
   try {
+    // eslint-disable-next-line global-require
     payload = jwt.verify(cookie, require('../app').NODE_ENV === 'production' ? require('../app').JWT_SECRET : 'some-secret-key');
   } catch (err) {
     next(new AuthorizationError('Необходима авторизация'));

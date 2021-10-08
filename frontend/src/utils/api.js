@@ -97,7 +97,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://api.mesto.stanislav.nomoredomains.club',
+  baseUrl: 'http://localhost:3000',
   headers: {
     'Content-Type': 'application/json'
   }

@@ -6,8 +6,8 @@ const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
+const cors = require('cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('cors')
 
 const auth = require('./middlewares/auth');
 
@@ -21,19 +21,18 @@ const errorHandler = require('./middlewares/error-handler');
 const userController = require('./controllers/users');
 
 const { PORT = 3000 } = process.env;
-const { NODE_ENV = 'development' } = process.env
-const { JWT_SECRET = 'some-secret-key' } = process.env
+const { NODE_ENV = 'development' } = process.env;
+const { JWT_SECRET = 'some-secret-key' } = process.env;
 
 module.exports = {
   JWT_SECRET,
-  NODE_ENV
-}
+  NODE_ENV,
+};
 
 const NotFoundError = require('./errors/not-found-err');
 
 const app = express();
 
-app.use(limiter);
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -45,10 +44,14 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 });
 
 app.use(requestLogger);
+app.use(limiter);
 app.use(cors({
-  origin: 'https://mesto.stanislav.nomoredomains.club',
+  origin: [
+    'https://mesto.stanislav.nomoredomains.club',
+    'http://mesto.stanislav.nomoredomains.club',
+  ],
   credentials: true,
-}))
+}));
 
 app.get('/crash-test', () => {
   setTimeout(() => {
@@ -56,9 +59,8 @@ app.get('/crash-test', () => {
   }, 0);
 });
 
-app.post('/signin', userController.login);
 app.post('/signout', userController.logout);
-app.post('/signup', userController.createUser);
+app.use('/', require('./routes/authorization'));
 
 app.use(auth);
 
