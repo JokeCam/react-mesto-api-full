@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = 'https://api.mesto.stanislav.nomoredomains.club'
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {
