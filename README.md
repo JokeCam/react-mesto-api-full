@@ -6,3 +6,6 @@ https://mesto.stanislav.nomoredomains.club
 
 ### IP Проекта:
 84.201.161.113
+
+### Домен проекта:
+mesto.stanislav.nomoredomains.club
