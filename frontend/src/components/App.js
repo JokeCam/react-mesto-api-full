@@ -119,6 +119,7 @@ function App() {
           console.log(res)
           setLoggedIn(true)
           history.push('/content')
+          cookieCheck()
         }
       })
   }
